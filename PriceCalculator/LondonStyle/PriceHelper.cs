@@ -8,7 +8,7 @@ namespace PriceCalculator.LondonStyle
             return originalPrice * stateTax / 100;
         }
 
-        public decimal CalalculateFinalPrice(decimal originalPrice, decimal priceTax)
+        public decimal CalculateFinalPrice(decimal originalPrice, decimal priceTax)
         {
             return originalPrice + priceTax;
         }

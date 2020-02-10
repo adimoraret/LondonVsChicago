@@ -13,7 +13,7 @@ namespace PriceCalculator.LondonStyle
         public decimal GetFinalPrice(decimal originalPrice, decimal stateTax)
         {
            var priceTax = _priceHelper.CalculatePriceTax(originalPrice, stateTax);
-           var finalPrice = _priceHelper.CalalculateFinalPrice(originalPrice, priceTax);
+           var finalPrice = _priceHelper.CalculateFinalPrice(originalPrice, priceTax);
            return _priceHelper.RoundToTwoDecimals(finalPrice);
         }
     }

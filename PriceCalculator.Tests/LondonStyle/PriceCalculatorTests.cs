@@ -19,17 +19,17 @@ namespace PriceCalculator.Tests.LondonStyle
         [Test]
         public void ShouldCalculateFinalPrice()
         {
-            var originalPrice = 99;
-            var stateTax = 7.25m;
-            var priceTax = 7.1775m;
-            var finalNonRoundedPrice = 106.1775m;
-            var finalPrice = 106.18m;
+            const decimal originalPrice = 99;
+            const decimal stateTax = 7.25m;
+            const decimal priceTax = 7.1775m;
+            const decimal finalNonRoundedPrice = 106.1775m;
+            const decimal finalPrice = 106.18m;
 
             _priceHelper
                 .Setup(x => x.CalculatePriceTax(originalPrice, stateTax))
                 .Returns(priceTax);
             _priceHelper
-                .Setup(x => x.CalalculateFinalPrice(originalPrice, priceTax))
+                .Setup(x => x.CalculateFinalPrice(originalPrice, priceTax))
                 .Returns(finalNonRoundedPrice);
             _priceHelper
                 .Setup(x => x.RoundToTwoDecimals(finalNonRoundedPrice))

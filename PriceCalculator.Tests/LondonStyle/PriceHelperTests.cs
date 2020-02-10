@@ -29,7 +29,7 @@ namespace PriceCalculator.Tests.LondonStyle
         [TestCase(20, 2)]
         public void ShouldCalculateFinalPrice(decimal originalPrice, decimal priceTax)
         {
-            var finalPrice = _sut.CalalculateFinalPrice(originalPrice, priceTax);
+            var finalPrice = _sut.CalculateFinalPrice(originalPrice, priceTax);
 
             Assert.That(finalPrice, Is.EqualTo(originalPrice + priceTax));
         }
