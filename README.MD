@@ -1,4 +1,4 @@
-# London vs Chicago testing #
+# London style testing vs Chicago style testing #
 There are two main schools of thoughts regarding unit testing:
 - Chicago style which focuses on results
 - London style which focuses on behavior
